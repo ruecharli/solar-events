@@ -248,7 +248,7 @@
         "id": "157",
         "folderId": "154",
         "color": "#000000",
-        "latex": "100\\sim s_{eq}\\left(x_{veq}\\right)",
+        "latex": "\\left(\\operatorname{sign}\\left(\\varphi\\right)+\\left(1-\\operatorname{abs}\\left(\\operatorname{sign}\\left(\\varphi\\right)\\right)\\right)\\right)\\cdot100\\sim s_{eq}\\left(x_{veq}\\right)",
         "residualVariable": "e_{1}",
         "regressionParameters": {
           "g_{at}": -2.7096458035718016,
@@ -263,14 +263,14 @@
         "id": "159",
         "folderId": "154",
         "color": "#2d70b3",
-        "latex": "100\\sim s_{so}\\left(x_{sso}\\right)",
+        "latex": "\\left(\\operatorname{sign}\\left(\\varphi\\right)+\\left(1-\\operatorname{abs}\\left(\\operatorname{sign}\\left(\\varphi\\right)\\right)\\right)\\right)\\cdot100\\sim s_{so}\\left(x_{sso}\\right)",
         "residualVariable": "e_{2}",
         "regressionParameters": {
-          "g_{at}": -499.9554697889385,
-          "g_{e}": 0.07041851553581122,
-          "g_{op}": 1.071997651067484,
-          "g_{lop}": 0.0008032846953742233,
-          "x_{sso}": 0.7927151119751267
+          "g_{at}": 36.63027594213345,
+          "g_{e}": 0.15828837143593236,
+          "g_{op}": 18.83141111742227,
+          "g_{lop}": 0.1542943417768061,
+          "x_{sso}": 13.771803020130523
         }
       },
       {
@@ -278,7 +278,7 @@
         "id": "160",
         "folderId": "154",
         "color": "#388c46",
-        "latex": "-100\\sim s_{eq}\\left(x_{aeq}\\right)",
+        "latex": "\\left(\\operatorname{sign}\\left(\\varphi\\right)+\\left(1-\\operatorname{abs}\\left(\\operatorname{sign}\\left(\\varphi\\right)\\right)\\right)\\right)\\cdot-100\\sim s_{eq}\\left(x_{aeq}\\right)",
         "residualVariable": "e_{3}",
         "regressionParameters": {
           "g_{at}": -1.6865304267324417,
@@ -293,14 +293,14 @@
         "id": "161",
         "folderId": "154",
         "color": "#6042a6",
-        "latex": "-100\\sim s_{so}\\left(x_{wso}\\right)",
+        "latex": "\\left(\\operatorname{sign}\\left(\\varphi\\right)+\\left(1-\\operatorname{abs}\\left(\\operatorname{sign}\\left(\\varphi\\right)\\right)\\right)\\right)\\cdot-100\\sim s_{so}\\left(x_{wso}\\right)",
         "residualVariable": "e_{4}",
         "regressionParameters": {
-          "g_{at}": 32.93851808947829,
-          "g_{e}": 0.10126964235029545,
-          "g_{op}": 18.856877903345243,
-          "g_{lop}": 0.1522911881825261,
-          "x_{wso}": 13.66103904408567
+          "g_{at}": -499.8977593120052,
+          "g_{e}": 0.07044738937505633,
+          "g_{op}": 1.0719399205690596,
+          "g_{lop}": 0.0008038632847856362,
+          "x_{wso}": 0.7930447075796915
         }
       },
       {
