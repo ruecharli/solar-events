@@ -56,7 +56,7 @@
       {
         "type": "text",
         "id": "62",
-        "text": "φ: Latitude (°)\nλ: Longitude (°)\n\nDAYLIGHT HOURS AND SOLAR EVENTS\n\nThis Desmos sheet uses values passed from The WorldSmith to calculate daylight hours and various solar events as seen from any coordinate on your fictional world over the course of a year.\n\nDay 0 refers to the moment of periapsis, i.e. the closest point in the planet's orbit to the sun.\n\nNotable solar events occur in the following order:\n- Vernal equinox (rising point of inflection)\n- Summer solstice (global maximum)\n- Autumnal equinox (falling point of inflection)\n- Winter solstice (global minimum)\n\nVariables may be reconfigured in the \"Variables\" folder."
+        "text": "φ: Latitude (°)\nλ: Longitude (°)\n\nDAYLIGHT HOURS AND SOLAR EVENTS\n\nThis Desmos sheet uses values passed from The WorldSmith to calculate daylight hours and various solar events as seen from any coordinate on your fictional world over the course of a year.\n\nDay 0 refers to the moment of periapsis, i.e. the closest point in the planet's orbit to the sun.\n\nNotable solar events occur in the following order:\n- Vernal equinox (rising point of inflection)\n- Summer solstice (global maximum)\n- Autumnal equinox (falling point of inflection)\n- Winter solstice (global minimum)"
       },
       {
         "type": "folder",
