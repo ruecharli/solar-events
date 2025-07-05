@@ -1,0 +1,462 @@
+{
+  "version": 11,
+  "randomSeed": "c992901f6ffa65dd6c7becd7ac86fef2",
+  "graph": {
+    "viewport": {
+      "xmin": -27.3942,
+      "ymin": -1.8,
+      "xmax": 392.6502,
+      "ymax": 25.8
+    },
+    "showGrid": false,
+    "xAxisStep": 10,
+    "yAxisStep": 4,
+    "xAxisMinorSubdivisions": 1,
+    "yAxisMinorSubdivisions": 1,
+    "xAxisLabel": "Day",
+    "yAxisLabel": "Daylight hours",
+    "degreeMode": true,
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-27.3942",
+      "xmax": "392.6502",
+      "ymin": "-0.075\\cdot24",
+      "ymax": "24+0.075\\cdot24"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "\\varphi=40",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-89.5",
+          "max": "89.5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "color": "#6042a6",
+        "latex": "\\lambda=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-180",
+          "max": "180",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "62",
+        "text": "φ: Latitude (°)\nλ: Longitude (°)\n\nDAYLIGHT HOURS AND SOLAR EVENTS\n\nThis Desmos sheet uses values passed from The WorldSmith to calculate daylight hours and various solar events as seen from any coordinate on your fictional world over the course of a year.\n\nDay 0 refers to the moment of periapsis, i.e. the closest point in the planet's orbit to the sun.\n\nNotable solar events occur in the following order:\n- Vernal equinox (rising point of inflection)\n- Summer solstice (global maximum)\n- Autumnal equinox (falling point of inflection)\n- Winter solstice (global minimum)\n\nVariables may be reconfigured in the \"Variables\" folder."
+      },
+      {
+        "type": "folder",
+        "id": "27",
+        "title": "Variables",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "30",
+        "folderId": "27",
+        "text": "P: Orbital period (days)\nϖ: Longitude of periapsis\nd: Day length (hours)\nε: Axial tilt (°)\nδ: Sun's apparent size (°)\ne: Eccentricity"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "27",
+        "color": "#c74440",
+        "latex": "P=g_{op}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "1000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "84",
+        "folderId": "27",
+        "color": "#6042a6",
+        "latex": "\\varpi=g_{lop}",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "P"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "27",
+        "color": "#6042a6",
+        "latex": "d=g_{dl}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.1",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "27",
+        "color": "#000000",
+        "latex": "\\varepsilon=g_{at}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "90",
+          "step": "0.01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "27",
+        "color": "#2d70b3",
+        "latex": "\\delta=g_{sap}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.001",
+          "max": "2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "27",
+        "color": "#2d70b3",
+        "latex": "e_{c}=g_{e}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "0.1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "75",
+        "title": "Formulae",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "80",
+        "folderId": "75",
+        "text": "f_M(x): Mean anomaly\nf_E(x): Eccentric anomaly series approximation\nf_v(x): True anomaly\nf_d(x): Solar declination\nf(x): Daylight hours\n\nP: Orbital period (days)\nϖ: Longitude of periapsis\nd: Day length (hours)\nε: Axial tilt (°)\nδ: Sun's angular diameter (°)\ne_c: Eccentricity\n\nφ: Latitude (°)\nλ: Longitude (°)"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "75",
+        "color": "#000000",
+        "latex": "f_{M}\\left(x\\right)=\\frac{360x+\\lambda}{P}+\\varpi+180",
+        "hidden": true,
+        "lines": true,
+        "lineOpacity": "1",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "75",
+        "color": "#000000",
+        "latex": "f_{E}\\left(x\\right)=\\left(f_{M}\\left(x\\right)+e_{c}\\cdot\\sin\\left(f_{M}\\left(x\\right)\\right)+\\frac{1}{2}e_{c}^{2}\\cdot\\sin\\left(2\\cdot f_{M}\\left(x\\right)\\right)+\\frac{3}{8}e_{c}^{3}\\cdot\\sin\\left(3\\cdot f_{M}\\left(x\\right)\\right)+\\frac{1}{3}e_{c}^{3}\\cdot\\sin\\left(f_{M}\\left(x\\right)\\right)\\right)",
+        "hidden": true,
+        "lines": true,
+        "lineOpacity": "1",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "75",
+        "color": "#000000",
+        "latex": "f_{v}\\left(x\\right)=2\\cdot\\tan^{-1}\\left(\\sqrt{\\frac{1+e_{c}}{1-e_{c}}}\\cdot\\tan\\left(\\frac{f_{E}\\left(x\\right)}{2}\\right)\\right)",
+        "hidden": true,
+        "lines": true,
+        "lineOpacity": "1",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "75",
+        "color": "#000000",
+        "latex": "f_{d}\\left(x\\right)=\\sin^{-1}\\left(\\sin\\left(\\varepsilon\\right)\\cdot\\sin\\left(f_{v}\\left(x\\right)\\right)\\right)",
+        "hidden": true,
+        "lines": false,
+        "lineOpacity": "1",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "114",
+        "folderId": "75",
+        "color": "#000000",
+        "latex": "f\\left(x\\right)=\\cos^{-1}\\left(\\cos\\left(90+\\frac{\\delta}{2}\\right)\\cdot\\sec\\left(\\varphi\\right)\\cdot\\sec\\left(f_{d}\\left(x\\right)\\right)-\\tan\\left(\\varphi\\right)\\cdot\\tan\\left(f_{d}\\left(x\\right)\\right)\\right)\\cdot\\frac{d}{180}\\ \\left\\{0\\le x\\le P\\ \\right\\}",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "154",
+        "title": "Solar Events",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "155",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "s_{eq}\\left(x\\right)=f_{d}'\\left(x\\right)\\left\\{0<x<P\\right\\}10",
+        "hidden": true,
+        "residualVariable": "e_{d}",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "156",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "s_{so}\\left(x\\right)=f_{d}\\left(x\\right)\\left\\{0<x<P\\right\\}0.17",
+        "hidden": true,
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "157",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "100\\sim s_{eq}\\left(x_{veq}\\right)",
+        "residualVariable": "e_{1}",
+        "regressionParameters": {
+          "g_{at}": -2.7096458035718016,
+          "g_{e}": -0.9349217393207977,
+          "g_{op}": 9.143341721439935,
+          "g_{lop}": -0.016522611850260684,
+          "x_{veq}": 0.07601340936067272
+        }
+      },
+      {
+        "type": "expression",
+        "id": "159",
+        "folderId": "154",
+        "color": "#2d70b3",
+        "latex": "-100\\sim s_{so}\\left(x_{sso}\\right)",
+        "residualVariable": "e_{2}",
+        "regressionParameters": {
+          "g_{at}": -499.9554697889385,
+          "g_{e}": 0.07041851553581122,
+          "g_{op}": 1.071997651067484,
+          "g_{lop}": 0.0008032846953742233,
+          "x_{sso}": 0.7927151119751267
+        }
+      },
+      {
+        "type": "expression",
+        "id": "160",
+        "folderId": "154",
+        "color": "#388c46",
+        "latex": "-100\\sim s_{eq}\\left(x_{aeq}\\right)",
+        "residualVariable": "e_{3}",
+        "regressionParameters": {
+          "g_{at}": -1.6865304267324417,
+          "g_{e}": 0.8928669823760668,
+          "g_{op}": 4.6648595174602425,
+          "g_{lop}": 30.013700587892593,
+          "x_{aeq}": 1.9460500996995977
+        }
+      },
+      {
+        "type": "expression",
+        "id": "161",
+        "folderId": "154",
+        "color": "#6042a6",
+        "latex": "100\\sim s_{so}\\left(x_{wso}\\right)",
+        "residualVariable": "e_{4}",
+        "regressionParameters": {
+          "g_{at}": 32.93851808947829,
+          "g_{e}": 0.10126964235029545,
+          "g_{op}": 18.856877903345243,
+          "g_{lop}": 0.1522911881825261,
+          "x_{wso}": 13.66103904408567
+        }
+      },
+      {
+        "type": "expression",
+        "id": "173",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "l\\left(x\\right)=0.92d",
+        "hidden": true,
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "162",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "\\left(x_{veq},l\\left(x_{veq}\\right)\\right)",
+        "showLabel": true,
+        "label": "V. Eq (${x_veq})",
+        "labelOrientation": "above",
+        "labelSize": "0.5",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "expression",
+        "id": "163",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "\\left(x_{sso},l\\left(x_{sso}\\right)\\right)",
+        "showLabel": true,
+        "label": "S. So (${x_sso})",
+        "labelOrientation": "above",
+        "labelSize": "0.5",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "expression",
+        "id": "164",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "\\left(x_{aeq},l\\left(x_{aeq}\\right)\\right)",
+        "showLabel": true,
+        "label": "A. Eq (${x_aeq})",
+        "labelOrientation": "above",
+        "labelSize": "0.5",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "expression",
+        "id": "165",
+        "folderId": "154",
+        "color": "#000000",
+        "latex": "\\left(x_{wso},l\\left(x_{wso}\\right)\\right)",
+        "showLabel": true,
+        "label": "W. So (${x_wso})",
+        "labelOrientation": "above",
+        "labelSize": "0.5",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "expression",
+        "id": "166",
+        "folderId": "154",
+        "color": "#388c46",
+        "latex": "s_{veq}\\left(y\\right)=x_{veq}\\left\\{0<y<d\\right\\}",
+        "lineOpacity": "0.25",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "167",
+        "folderId": "154",
+        "color": "#fa7e19",
+        "latex": "s_{sso}\\left(y\\right)=x_{sso}\\left\\{0<y<d\\right\\}",
+        "lineOpacity": "0.25",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "168",
+        "folderId": "154",
+        "color": "#c74440",
+        "latex": "s_{aeq}\\left(y\\right)=x_{aeq}\\left\\{0<y<d\\right\\}",
+        "lineOpacity": "0.25",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "169",
+        "folderId": "154",
+        "color": "#2d70b3",
+        "latex": "s_{wso}\\left(y\\right)=x_{wso}\\left\\{0<y<d\\right\\}",
+        "lineOpacity": "0.25",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "151",
+        "title": "Misc.",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "151",
+        "color": "#000000",
+        "latex": "a_{inspect}=121",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "P",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "172",
+        "folderId": "151",
+        "color": "#000000",
+        "latex": "a_{inspecty}=f\\left(a_{inspect}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "151",
+        "color": "#000000",
+        "latex": "\\left(a_{inspect},f\\left(a_{inspect}\\right)\\right)",
+        "showLabel": true,
+        "label": "Day ${a_inspect}, ${a_inspecty}h",
+        "labelOrientation": "below",
+        "labelSize": "0.5"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "151",
+        "color": "#000000",
+        "latex": "x=P\\ \\left\\{0\\le y\\le d\\right\\}",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "151",
+        "color": "#000000",
+        "latex": "b\\left(x\\right)=d\\ \\left\\{0\\le x\\le P\\right\\}",
+        "lines": true,
+        "lineWidth": "1.5"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

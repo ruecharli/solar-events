@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Daylight Hours and Solar Events</title>
+</head>
+<body>
+  <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <div id="calculator" style="width: 95vw; height: 95vh;"></div>
+  <script>
+    var elt = document.getElementById('calculator');
+    var calculator = Desmos.GraphingCalculator(elt);
+    fetch('desmos.json')
+      .then(response => response.json())
+      .then(state => {
+        calculator.setState(state);
+        updateFromUrl();
+      });
+    function updateFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      for (const [key, value] of params.entries()) {
+        calculator.setExpression({ id: key, latex: `${key} = ${value}` });
+      }
+    }
+  </script>
+</body>
+</html>
