@@ -498,7 +498,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "expression",
@@ -511,7 +512,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "expression",
@@ -524,7 +526,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "expression",
@@ -537,7 +540,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "expression",
@@ -550,7 +554,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "expression",
@@ -563,7 +568,8 @@
         "labelOrientation": "right",
         "labelSize": "0.5",
         "pointSize": "0",
-        "movablePointSize": "0"
+        "movablePointSize": "0",
+        "dragMode": "NONE"
       },
       {
         "type": "folder",
