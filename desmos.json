@@ -134,7 +134,7 @@
         "type": "text",
         "id": "30",
         "folderId": "27",
-        "text": "P: Orbital period (days)\nϖ: Longitude of periapsis (°, geocentric; measured from first equinox)\nd: Day length (h)\nε: Axial tilt (°)\nδ: Sun's apparent size (°)\ne_c: Eccentricity\nλ_s: Subsolar longitude at 0 days (°)"
+        "text": "P: Orbital period (days)\nw: Longitude of periapsis (°, geocentric; measured from first equinox)\nd: Day length (h)\ne_t: Axial tilt (°)\ns: Sun's apparent size (°)\ne_c: Eccentricity\nl_s: Subsolar longitude at 0 days (°)"
       },
       {
         "type": "expression",
@@ -152,10 +152,10 @@
       },
       {
         "type": "expression",
-        "id": "u_{varpi}",
+        "id": "w",
         "folderId": "27",
         "color": "#6042a6",
-        "latex": "\\varpi=283",
+        "latex": "w=283",
         "slider": {
           "hardMin": true,
           "hardMax": true,
@@ -179,10 +179,10 @@
       },
       {
         "type": "expression",
-        "id": "u_{varepsilon}",
+        "id": "e_{t}",
         "folderId": "27",
         "color": "#000000",
-        "latex": "\\varepsilon=23.44",
+        "latex": "e_{t}=23.44",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -194,10 +194,10 @@
       },
       {
         "type": "expression",
-        "id": "u_{delta}",
+        "id": "s",
         "folderId": "27",
         "color": "#2d70b3",
-        "latex": "\\delta=0.53",
+        "latex": "s=0.53",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -222,10 +222,10 @@
       },
       {
         "type": "expression",
-        "id": "u_{lambdas}",
+        "id": "l_{s}",
         "folderId": "27",
         "color": "#c74440",
-        "latex": "\\lambda_{s}=0",
+        "latex": "l_{s}=0",
         "slider": {
           "hardMin": true,
           "hardMax": true,
@@ -243,7 +243,7 @@
         "type": "text",
         "id": "80",
         "folderId": "75",
-        "text": "f_M(x): Mean anomaly\nf_E(x): Eccentric anomaly series approximation\nf_v(x): True anomaly\nf_d(x): Solar declination\nf(x): Daylight hours\n\nP: Orbital period (days)\nϖ: Longitude of periapsis (°)\nd: Day length (h)\nε: Axial tilt (°)\nδ: Sun's apparent size (°)\ne_c: Eccentricity\nλ_s: Subsolar longitude at 0 days (°)\n\nφ: Latitude (°)\nλ: Longitude (°)"
+        "text": "f_M(x): Mean anomaly\nf_E(x): Eccentric anomaly series approximation\nf_v(x): True anomaly\nf_d(x): Solar declination\nf(x): Daylight hours\n\nP: Orbital period (days)\nw: Longitude of periapsis (°)\nd: Day length (h)\ne_t: Axial tilt (°)\ns: Sun's apparent size (°)\ne_c: Eccentricity\nl_s: Subsolar longitude at 0 days (°)\n\nφ: Latitude (°)\nλ: Longitude (°)"
       },
       {
         "type": "expression",
@@ -283,7 +283,7 @@
         "id": "71",
         "folderId": "75",
         "color": "#000000",
-        "latex": "f_{d}\\left(x\\right)=\\sin^{-1}\\left(\\sin\\left(\\varepsilon\\right)\\cdot\\sin\\left(f_{v}\\left(x\\right)\\right)\\right)\\left\\{0\\le x\\le P\\right\\}",
+        "latex": "f_{d}\\left(x\\right)=\\sin^{-1}\\left(\\sin\\left(e_{t}\\right)\\cdot\\sin\\left(f_{v}\\left(x\\right)\\right)\\right)\\left\\{0\\le x\\le P\\right\\}",
         "hidden": true,
         "lineOpacity": "1",
         "lineWidth": "1"
@@ -293,7 +293,7 @@
         "id": "114",
         "folderId": "75",
         "color": "#000000",
-        "latex": "f\\left(x\\right)=\\cos^{-1}\\left(\\cos\\left(90+\\frac{\\delta}{2}\\right)\\cdot\\sec\\left(\\varphi\\right)\\cdot\\sec\\left(f_{d}\\left(x\\right)\\right)-\\tan\\left(\\varphi\\right)\\cdot\\tan\\left(f_{d}\\left(x\\right)\\right)\\right)\\cdot\\frac{d}{180}",
+        "latex": "f\\left(x\\right)=\\cos^{-1}\\left(\\cos\\left(90+\\frac{s}{2}\\right)\\cdot\\sec\\left(\\varphi\\right)\\cdot\\sec\\left(f_{d}\\left(x\\right)\\right)-\\tan\\left(\\varphi\\right)\\cdot\\tan\\left(f_{d}\\left(x\\right)\\right)\\right)\\cdot\\frac{d}{180}",
         "lineWidth": "2"
       },
       {
@@ -446,7 +446,7 @@
         "id": "218",
         "folderId": "154",
         "color": "#000000",
-        "latex": "x_{aap}=\\operatorname{round}\\left(\\operatorname{mod}\\left(P\\cdot\\frac{\\varpi+180}{360},P\\right),4\\right)",
+        "latex": "x_{aap}=\\operatorname{round}\\left(\\operatorname{mod}\\left(P\\cdot\\frac{w+180}{360},P\\right),4\\right)",
         "lineStyle": "DASHED",
         "lineOpacity": "0.25",
         "lineWidth": "2"
@@ -456,7 +456,7 @@
         "id": "216",
         "folderId": "154",
         "color": "#000000",
-        "latex": "x_{ape}=\\operatorname{round}\\left(\\operatorname{mod}\\left(P\\cdot\\frac{\\varpi}{360},P\\right),4\\right)",
+        "latex": "x_{ape}=\\operatorname{round}\\left(\\operatorname{mod}\\left(P\\cdot\\frac{w}{360},P\\right),4\\right)",
         "lineStyle": "DASHED",
         "lineOpacity": "0.25",
         "lineWidth": "2"
@@ -568,15 +568,14 @@
       {
         "type": "folder",
         "id": "151",
-        "title": "Moving Point",
-        "collapsed": true
+        "title": "Moving Point"
       },
       {
         "type": "expression",
         "id": "244",
         "folderId": "151",
         "color": "#6042a6",
-        "latex": "\\lambda_{total}=\\lambda-\\lambda_{s}"
+        "latex": "\\lambda_{total}=\\lambda-l_{s}"
       },
       {
         "type": "expression",
