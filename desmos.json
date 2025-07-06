@@ -568,7 +568,8 @@
       {
         "type": "folder",
         "id": "151",
-        "title": "Moving Point"
+        "title": "Moving Point",
+        "collapsed": true
       },
       {
         "type": "expression",
