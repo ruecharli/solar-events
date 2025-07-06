@@ -152,7 +152,7 @@
       },
       {
         "type": "expression",
-        "id": "\\varpi",
+        "id": "varpi",
         "folderId": "27",
         "color": "#6042a6",
         "latex": "\\varpi=283",
@@ -179,7 +179,7 @@
       },
       {
         "type": "expression",
-        "id": "\\varepsilon",
+        "id": "varepsilon",
         "folderId": "27",
         "color": "#000000",
         "latex": "\\varepsilon=23.44",
@@ -194,7 +194,7 @@
       },
       {
         "type": "expression",
-        "id": "\\delta",
+        "id": "delta",
         "folderId": "27",
         "color": "#2d70b3",
         "latex": "\\delta=0.53",
@@ -222,7 +222,7 @@
       },
       {
         "type": "expression",
-        "id": "\\lambda_{s}",
+        "id": "lambda_{s}",
         "folderId": "27",
         "color": "#c74440",
         "latex": "\\lambda_{s}=0",
